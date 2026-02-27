@@ -60,6 +60,18 @@ a[href*="http"] {
   background: url("external-link-52.png") no-repeat right center;
   background-size: 10px 10px;
 }
+ul{
+    margin-top: 1rem 0;
+    margin-bottom: 1rem 0;
+    line-height: normal;
+    list-style-type:lower-greek;
+}
+ol {
+    margin-top: 1rem 0;
+    margin-bottom: 1rem 0;
+    line-height: normal;
+    list-style-type: georgian;
+}
 
 /* header and footer */
 
