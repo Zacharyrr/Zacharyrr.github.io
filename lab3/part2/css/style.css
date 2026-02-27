@@ -64,13 +64,25 @@ ul{
     margin-top: 1rem 0;
     margin-bottom: 1rem 0;
     line-height: normal;
-    list-style-type:lower-greek;
+    list-style-type:square;
 }
 ol {
     margin-top: 1rem 0;
     margin-bottom: 1rem 0;
     line-height: normal;
-    list-style-type: georgian;
+    list-style-type:lower-roman;
+}
+nav li a {
+  font-family: "Prata", serif;
+  display: inline-block;
+  border: 1px solid #aa6666;
+  width: 100%;
+  line-height: 3.5;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase; 
 }
 
 /* header and footer */
