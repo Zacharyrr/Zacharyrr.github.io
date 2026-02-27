@@ -3,11 +3,15 @@ h1{
     font-family:"Prata", serif;
     font-size: 3rem;
     text-align: center;
+    letter-spacing: 0.05rem;
 }
 h2{
     font-family:"Prata", serif ;
     font-size: 3rem;
+    margin-bottom: 0;
+    letter-spacing: 0.05rem;
 }
+
 /* General setup */
 * {
   box-sizing: border-box;
@@ -21,6 +25,7 @@ font-family:"Playfair Display" serif;
   max-width: 1400px;
   font-size: 1rem;
   line-height: normal;
+  letter-spacing: 0.03rem;
 }
 
 /* Layout */
