@@ -55,6 +55,11 @@ a:visited {
   text-decoration: none;
   color: #773333;
 }
+a[href*="http"] {
+  padding-right: 16px;
+  background: url("lab3/part2/externallink/external-link-52.png") no-repeat right center;
+  background-size: 14px 14px;
+}
 
 /* header and footer */
 
