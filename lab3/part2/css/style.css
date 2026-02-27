@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Prata&display=swap');
 h1{
     font-family:"Prata", serif;
+    font-size: 3rem;
+    text-align: center;
 }
 h2{
     font-family:"Prata", serif ;
+    font-size: 3rem;
 }
 /* General setup */
 * {
@@ -16,6 +19,8 @@ font-family:"Playfair Display" serif;
   padding: 0 20px;
   min-width: 980px;
   max-width: 1400px;
+  font-size: 1rem;
+  line-height: normal;
 }
 
 /* Layout */
