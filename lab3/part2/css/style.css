@@ -38,6 +38,23 @@ main {
   gap: 40px;
   padding: 20px 0;
 }
+a{
+    outline: none;
+}
+a:link{
+  color: #773333;
+}
+a:focus{
+  color: #773333;
+}
+a:hover{
+  text-decoration: none;
+  color: #773333;
+}
+a:visited {
+  text-decoration: none;
+  color: #773333;
+}
 
 /* header and footer */
 
