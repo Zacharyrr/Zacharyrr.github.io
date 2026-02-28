@@ -25,7 +25,7 @@ section h2{
 }
 
 body {
-font-family:"Playfair Display" serif;
+font-family:"Playfair Display", serif;
   margin: 0 auto;
   padding: 0 20px;
   min-width: 980px;
@@ -66,19 +66,19 @@ a[href*="http"] {
   background-size: 10px 10px;
 }
 ul{
-    margin-top: 1rem 0;
-    margin-bottom: 1rem 0;
+    margin-top: 1rem ;
+    margin-bottom: 1rem ;
     line-height: normal;
     list-style-type:square;
 }
 ol {
-    margin-top: 1rem 0;
-    margin-bottom: 1rem 0;
+    margin-top: 1rem ;
+    margin-bottom: 1rem ;
     line-height: normal;
     list-style-type:lower-roman;
 }
 nav li{
-    margin-bottom: none;
+    margin-bottom: 0;
     list-style-type: none;
     text-decoration: none;
 }
