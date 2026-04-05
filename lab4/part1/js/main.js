@@ -35,17 +35,19 @@ function returnRandomStoryString() {
 }
 // Event listener and partial generate function definition
 generateBtn.addEventListener("click", generateStory);
-function generateStory() {
+
+function generateStory() 
+{
     let newStory = returnRandomStoryString();
     //custom name replacement 
   if (customName.value !== "") {
     const name = customName.value;
-    newStory = newStory.replace("Bob", customName.value);
+    newStory = newStory.replace("Bob", name);
   } 
 
   if (document.getElementById("uk").checked) {
-    const weight = Math.round(300/14) + " stone";
-    const temperature = Math.round((94 - 32) * 5 / 9) + " Celsius"; 
+    const weight = `${Math.round(300/14)} + stone`;
+    const temperature = `${Math.round((94 - 32) * (5 / 9))} Celsius`;
 
     newStory = newStory.replace("300 pounds", weight);
     newStory = newStory.replace("94 Fahrenheit", temperature);
