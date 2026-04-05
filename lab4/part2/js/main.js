@@ -18,9 +18,11 @@ const baseURL = "https://mdn.github.io/shared-assests/images/examples/learn/gall
 for (const image of images){
     const newImage = document.createElement("image");
     // image source
-    newImage.src = baseURL +image.filename;
+    newImage.src = baseURL + image.filename;
     //alt tect
     newImage.alt = image.alt;
+    //adding image keyboard focasable attribute 
+    newImage.tabIndex="0";
     //adding image to page by appending it 
     thumbBar.appendChild(newImage)
 }
