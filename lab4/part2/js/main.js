@@ -12,11 +12,11 @@ const images = [
     {filename: "pic4.jpg", alt: "section of a wall from a pharaoh's tomb"},
     {filename: "pic5.jpg", alt: "Large moth on a leaf "},
 ]
-const baseURL = "https://mdn.github.io/shared-assests/images/examples/learn/gallery/";
+const baseURL = "https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
 
 //for loop for go through each image
 for (const image of images){
-    const newImage = document.createElement("image");
+    const newImage = document.createElement("img");
     // image source
     newImage.src = baseURL + image.filename;
     //alt tect
@@ -34,9 +34,30 @@ for (const image of images){
       updateDisplayedImage(e);
     }
   });
+}
   //creating the update displayed image function
   function updateDisplayedImage(e) {
   displayedImage.src = e.target.src;
   displayedImage.alt = e.target.alt;
+
 }
-}
+// DARK/LIGHT BUTTON
+// Adding a click event listener to the button
+btn.addEventListener("click", () =>{
+    //checking if the button currenlty has the dark class
+  if (btn.classList.contains("dark"))
+    // Changing the  button text to "Lighten" to indicate the next action 
+{
+    btn.textContent = "Lighten";
+    //// Applying a dark overlay to the image (50% opacity)
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+  } else {
+    // Changing the button text back to "Darken"
+    btn.textContent = "Darken";
+    //// Remove the dark overlay 
+    overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+  }
+
+  // // Toggle the "dark" class on the button 
+  btn.classList.toggle("dark");
+});
