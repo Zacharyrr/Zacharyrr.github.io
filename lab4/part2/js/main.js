@@ -17,6 +17,10 @@ const baseURL = "https://mdn.github.io/shared-assests/images/examples/learn/gall
 //for loop for go through each image
 for (const image of images){
     const newImage = document.createElement("image");
-    
-
+    // image source
+    newImage.src = baseURL +image.filename;
+    //alt tect
+    newImage.alt = image.alt;
+    //adding image to page by appending it 
+    thumbBar.appendChild(newImage)
 }
