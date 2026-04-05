@@ -12,3 +12,4 @@ const images = [
     {filename: "pic4.jpg", alt: "section of a wall from a pharaoh's tomb"},
     {filename: "pic5.jpg", alt: "Large moth on a leaf "},
 ]
+const baseURL = "https://mdn.github.io/shared-assests/images/examples/learn/gallery/";
