@@ -13,3 +13,10 @@ const images = [
     {filename: "pic5.jpg", alt: "Large moth on a leaf "},
 ]
 const baseURL = "https://mdn.github.io/shared-assests/images/examples/learn/gallery/";
+
+//for loop for go through each image
+for (const image of images){
+    const newImage = document.createElement("image");
+    
+
+}
