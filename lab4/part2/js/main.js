@@ -24,5 +24,14 @@ for (const image of images){
     //adding image keyboard focasable attribute 
     newImage.tabIndex="0";
     //adding image to page by appending it 
-    thumbBar.appendChild(newImage)
+    thumbBar.appendChild(newImage);
+    //CLICKING EVENT 
+      newImage.addEventListener("click",updateDisplayedImage);
+      //if the user clicks the enter key on their keyboard then 
+      // the image will be show in full size if the key is pressed after focus 
+        newImage.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      updateDisplayedImage(e);
+    }
+  });
 }
