@@ -65,7 +65,7 @@ class Ball extends Shape {
     this.x += this.velX;
     this.y += this.velY;
   }
-
+  //class for evilcircle
   class EvilCircle extends Shape {
   constructor(x, y) {
     super(x, y, 20, 20);
@@ -142,6 +142,10 @@ collisionDetect() {
     }
   }
 }
+const evilCircle = new EvilCircle(
+  random(0, width),
+  random(0, height)
+);
 
 const balls = [];
 
@@ -166,9 +170,16 @@ function loop() {
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if (ball.exists){ //if condition for evil circle to appear
+        ball.draw();
+        ball.update();
+        ball.collisionDetect();
+    }
+}
+//updates the loop with the evil circle that eats balls
+   evilCircle.draw();
+   evilCircle.checkBounds();
+   evilCircle.collisionDetect();
   }
 
   requestAnimationFrame(loop);
