@@ -3,6 +3,9 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+const para = document.querySelector("p");
+let count = 0;
+
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -30,10 +33,6 @@ class Shape {
 class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
     super(x,y,velX,velY);
-    this.x = x;
-    this.y = y;
-    this.velX = velX;
-    this.velY = velY;
     this.color = color;
     this.size = size;
     this.exists = true;
@@ -65,6 +64,20 @@ class Ball extends Shape {
     this.x += this.velX;
     this.y += this.velY;
   }
+  collisionDetect() {
+  for (const ball of balls) {
+    if (!(this === ball) && ball.exists) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
+}
   //class for evilcircle
   class EvilCircle extends Shape {
   constructor(x, y) {
@@ -123,25 +136,13 @@ collisionDetect() {
 
       if (distance < this.size + ball.size) {
         ball.exists = false;
+        count--;
+        para.textContent="Ball count: " + count;
       }
     }
   }
 }
-}
-
-  collisionDetect() {
-    for (const ball of balls) {
-     if (!(this === ball) && ball.exists) {
-      const dx = this.x - ball.x;
-      const dy = this.y - ball.y;
-      const distance = Math.sqrt(dx * dx + dy * dy);
-
-    if (distance < this.size + ball.size) {
-        ball.color = this.color = randomRGB();
-      }
-    }
   }
-}
 const evilCircle = new EvilCircle(
   random(0, width),
   random(0, height)
@@ -163,7 +164,9 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  count++;
 }
+para.textContent = "Ball count: " + count;
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
@@ -180,7 +183,7 @@ function loop() {
    evilCircle.draw();
    evilCircle.checkBounds();
    evilCircle.collisionDetect();
-  }
+  
 
   requestAnimationFrame(loop);
 }
