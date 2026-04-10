@@ -1,5 +1,5 @@
 // setup canvas
-//console.log("In main.js");
+console.log("In main.js");
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
