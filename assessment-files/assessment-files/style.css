@@ -50,8 +50,32 @@ p, li, table {
 }
 
 /* || header layout */
+header {
+  background-color: #dde;
+  padding: 20px;
+}
+h1, h2, h3 {
+  font-family: 'Sonsie One', cursive;
+  color: #2a2a2a;
+}
 
-div[class="nav"], article, footer, .secondary {
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+nav, article, footer, .secondary {
   background-color: white;
 }
 
@@ -63,7 +87,7 @@ article {
   margin-right: 10px;
 }
 
-div[class="nav"] {
+nav {
   height: 50px;
   background-color: white;
   display: flex;
@@ -71,28 +95,27 @@ div[class="nav"] {
   margin-bottom: 10px;
 }
 
-div[class="nav"] ul {
+nav ul {
   padding: 0;
   list-style-type: none;
   flex: 2;
   display: flex;
 }
 
-div[class="nav"] li {
-  display: inline;
+nav li {
   text-align: center;
   flex: 1;
 }
 
-div[class="nav"] a {
+
+nav a {
   display: inline-block;
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
   color: black;
 }
-
-div[class="nav"] .search {
+nav .search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -181,12 +204,8 @@ audio {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
+.comments h3 {
   font-size: 2rem;
-}
-
-.comments font[size="6"]:nth-of-type(2) {
-  margin-bottom: 0;
 }
 
 .comment-form {
