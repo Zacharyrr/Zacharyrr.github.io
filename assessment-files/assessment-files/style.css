@@ -33,6 +33,10 @@ font[size="5"] {
   font-size: 2.2rem;
 }
 
+:focus {
+  outline: 3px solid blue;
+  outline-offset: 2px;
+}
 p, li, table {
   font-size: 1.6rem;
   line-height: 1.5;
@@ -45,7 +49,7 @@ header {
 }
 h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+  color:black;
 }
 
 h1 {
@@ -124,7 +128,7 @@ nav .search {
 .search input[type="submit"] {
   flex: 1;
   margin-left: 1rem;
-  background: #333;
+  background:black;
   border: 0;
   color: white;
 }
